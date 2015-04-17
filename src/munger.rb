@@ -3,10 +3,10 @@
 
 require 'rdf'
 require 'rdf/ntriples'
-
+require 'test-unit'
 class Munger
 
-  model = null
+  model = nil
 
   def initialize ()
     get_new_model
@@ -15,9 +15,9 @@ class Munger
   def create_new_model ()
     if (model == null)
       graph = RDF::Graph.new
-    end
     else
       STDOUT.puts "Attempted to initialize model, but a pre-existing model was found"
+    end
   end
 
   def get_model ()
