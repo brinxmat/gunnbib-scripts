@@ -21,11 +21,16 @@ class Munger
     end
   end
 
+  def add_triple (s, p, o)
+    @@model << [s, p, o]
+  end
+
   def get_model ()
+    return @@model
+  end
+
+  def get_model_as_ntriples ()
     @@model.dump(:ntriples)
-  end 
-
-
-
+  end
 
 end
