@@ -3,7 +3,8 @@
 
 require 'rdf'
 require 'rdf/ntriples'
-require 'test-unit'
+require 'test/unit'
+
 class Munger
 
   model = nil
