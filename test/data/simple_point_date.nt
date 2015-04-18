@@ -1,0 +1,6 @@
+<http://example.com/d1> <http://purl.org/dc/terms/date> _:ace84bf0-c778-0132-4f2e-3c15c2cc80b8 .
+_:ace84bf0-c778-0132-4f2e-3c15c2cc80b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+_:ace84bf0-c778-0132-4f2e-3c15c2cc80b8 <http://www.w3.org/2006/time#year> "2015"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+_:ace84bf0-c778-0132-4f2e-3c15c2cc80b8 <http://www.w3.org/2006/time#month> "--4"^^<http://www.w3.org/2001/XMLSchema#gMonth> .
+_:ace84bf0-c778-0132-4f2e-3c15c2cc80b8 <http://www.w3.org/2006/time#day> "---17"^^<http://www.w3.org/2001/XMLSchema#gDay> .
+_:ace84bf0-c778-0132-4f2e-3c15c2cc80b8 <http://www.ntnu.no/ub/data/nl#certainty> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
