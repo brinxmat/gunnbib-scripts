@@ -38,9 +38,9 @@ class TestMunger < Test::Unit::TestCase
 
   def test_read_data_from_file ()
     munger = Munger.new
-    output = munger.read_data_from_file('test/data/simple.csv')
-    data = {:field_0 => 'zero', 
-            :field_1 => 'one'}
+    output = munger.read_data_from_file('./test/data/simple.csv')
+    data = [{:field_0 => 'zero', 
+            :field_1 => 'one'}]
     assert_equal(data, output)
   end
 
@@ -331,7 +331,6 @@ class TestMunger < Test::Unit::TestCase
     munger.set_base_uri(@@s)
     munger.add_interval_date("2014-01-02–2015-01-02")
     output = munger.get_model
-    STDOUT.puts output.dump(:ntriples)
     isomorphic = repo.isomorphic_with? output
     assert(isomorphic == true, "The round-tripped span-date models were not the same: #{isomorphic}")
   end
@@ -341,8 +340,54 @@ class TestMunger < Test::Unit::TestCase
     munger.set_base_uri(@@s)
     munger.add_interval_date("2014-01-02–2015-01-02?")
     output = munger.get_model
-    STDOUT.puts output.dump(:ntriples)
     isomorphic = repo.isomorphic_with? output
     assert(isomorphic == true, "The round-tripped span-date models were not the same: #{isomorphic}")
+  end
+
+  def test_munge
+    repo = RDF::Repository.load('./test/data/test_munge.nt')
+
+    munger = Munger.new
+
+    data = { :nyid=>"130040776",
+             :dokid_objektid=>"802031234",
+             :forfatter=>"Schnabel, Paul Marcus",
+             :forfatterauthorized=>"p177",
+             :brevmottaker=>nil,
+             :brevmottakerauthorized=>nil,
+             :tittel=>
+              "Situations Kart over nogle Stader i Stordalselven, hvor Anders Sivertsøn Hembre har haft Fiskegaard ...",
+             :raccess=>"1833",
+             :datayear=>"1833",
+             :fysisk_form=>"f3",
+             :omhandlet_sted=>"Stjørdalselva, Hembre gård, Hegre gård",
+             :land_geonameid_=>nil,
+             :fylke_geonameid_=>nil,
+             :kommune_bygd_geonameid_=>nil,
+             :skapelsessted=>nil,
+             :skapelsessted_geonameid=>"3136767",
+             :genre=>"g8",
+             :emneord_norske=>"Elver,gårder",
+             :dewey_number=>nil,
+             :lcsubjects=>nil,
+             :bemerkninger_noter=>nil,
+             :scale=>"1:1000",
+             :kol=>"kol.",
+             :size=>"37 x 48"}
+
+    munger.munge(data)
+    output = munger.get_model
+    isomorphic = repo.isomorphic_with? output
+    assert(isomorphic == true, "The round-tripped span-date models were not the same: #{isomorphic}")  
+  end
+
+  def test_read(file)
+    repo = RDF::Repository.load('./test/data/test_data.nt')
+    munger = Munger.new
+    munger.read('./test/data/test_data.csv')
+    output = munger.get_model
+    isomorphic = repo.isomorphic_with? output
+    assert(isomorphic == true, "The round-tripped span-date models were not the same: #{isomorphic}")
+
   end
 end

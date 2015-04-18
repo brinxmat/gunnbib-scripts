@@ -1,0 +1,18 @@
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/identifier> "130040776" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/identifier> "802031234" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/creator> <http://www.ntnu.no/ub/digital/person/p177> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/title> "Situations Kart over nogle Stader i Stordalselven, hvor Anders Sivertsøn Hembre har haft Fiskegaard ..." .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/date> _:f11f6cad-45c3-4182-b0b2-e45d93af028a .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ntnu.no/ub/digital/format/f3> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Stjørdalselva" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Hembre gård" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Hegre gård" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Elver" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "gårder" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.ntnu.no/ub/data/nl#placeOfCreation> <http://sws.geonames.org/3136767> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.ntnu.no/ub/data/nl#genre> <http://www.ntnu.no/ub/data/genre/g8> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.geographicknowledge.de/vocab/maps#hasScale> "1:1000" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.ntnu.no/ub/data/nl#dimensions> "37 x 48" .
+_:f11f6cad-45c3-4182-b0b2-e45d93af028a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+_:f11f6cad-45c3-4182-b0b2-e45d93af028a <http://www.w3.org/2006/time#year> "1833"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+_:f11f6cad-45c3-4182-b0b2-e45d93af028a <http://www.ntnu.no/ub/data/nl#certainty> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .

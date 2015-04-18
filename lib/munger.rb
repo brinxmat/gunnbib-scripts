@@ -8,7 +8,7 @@ require 'csv'
 require 'uuid'
 require 'date'
 require 'securerandom'
-
+require 'pp'
 class Munger
 
   @@model = nil
@@ -35,13 +35,12 @@ class Munger
   end
 
   def read_data_from_file (file)
-    @data = {}
+    @data = Array.new
     CSV.foreach(file,
                  {:headers => true, :header_converters => :symbol}
                 ) do |row|
-      @data.merge!(row)
+      @data.push(row.to_hash)
     end
-
     return @data
   end
 
@@ -137,7 +136,7 @@ class Munger
     add_triple(
       get_base_uri,
       RDF::URI.new("http://purl.org/dc/terms/subject"),
-      RDF::Literal.new(subject)
+      RDF::Literal.new(subject.strip)
       )
   end
 
@@ -301,6 +300,109 @@ class Munger
    
   end
 
+  def munge (data)
+
+    set_base_uri RDF::URI.new("http://www.ntnu.no/ub/digital/document/" + data[:nyid])
+
+    add_identifier data[:nyid]
+    
+    if (data[:dokid_objektid])
+      ids = data[:dokid_objektid].split(',')
+      ids.each { |id| add_identifier id }
+    end
+    
+    if (data[:forfatterauthorized])
+      auths = data[:forfatterauthorized].split(',')
+      auths.each { |id| add_creator id }
+    end
+
+    if (data[:brevmottakerauthorized])
+      brevmottaker = data[:brevmottakerauthorized].split(',')
+      brevmottaker.each { |id| add_recipient id }
+    end
+    
+    if (data[:tittel])
+      add_title data[:tittel]
+    end
+
+    if (data[:datayear])
+      date = data[:datayear].split(',')
+      date.each { |date| 
+      if date.include? '–'
+      add_interval_date date
+      else
+        add_point_date date
+      end
+      }
+    end
+
+    if (data[:fysisk_form])
+      form = data[:fysisk_form].split(',')
+      form.each {|f| add_document_type f}
+    end
+
+    if (data[:omhandlet_sted])
+      sted = data[:omhandlet_sted].split(',')
+      sted.each {|f| add_text_subject f}
+    end
+
+    if (data[:land_geonameid_])
+      sted = data[:land_geonameid_].split(',')
+      sted.each {|f| add_country f}
+    end
+
+    if (data[:fylke_geonameid_])
+      sted = data[:fylke_geonameid_].split(',')
+      sted.each {|f| add_county f}
+    end
+
+    if (data[:kommune_bygd_geonameid_])
+      sted = data[:kommune_bygd_geonameid_].split(',')
+      sted.each {|f| add_municipality f}
+    end
+
+    if (data[:skapelsessted_geonameid])
+      sted = data[:skapelsessted_geonameid].split(',')
+      sted.each {|f| add_place_of_creation f}
+    end
+
+    if (data[:genre])
+      sted = data[:genre].split(',')
+      sted.each {|f| add_genre f}
+    end
+
+    if (data[:emneord_norske])
+      sted = data[:emneord_norske].split(',')
+      sted.each {|f| add_text_subject f}
+    end
+
+    if (data[:emneord_norske])
+      sted = data[:emneord_norske].split(',')
+      sted.each {|f| add_text_subject f}
+    end
+
+    if (data[:bemerkninger_noter])
+      add_note data[:bemerkninger_noter]
+    end
+    if (data[:scale])
+      sted = data[:scale].split(',')
+      sted.each {|f| add_map_scale f}
+    end
+    if (data[:size])
+      sted = data[:size].split(',')
+      sted.each {|f| add_dimensions f}
+    end    
+  end
+
+  def read (file)
+
+    data = read_data_from_file(file)
+
+    pp data
+
+    data.each { |x| munge x }
+
+  end
 
 
 end

@@ -1,0 +1,33 @@
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/identifier> "130041158" .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/identifier> "802029701" .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/creator> <http://www.ntnu.no/ub/digital/person/p177> .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/title> "Situations kort over en Deel omtvistede Gienstande ved Eggens Møllebrug i Børsens Præstegield" .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/date> _:f9f92c1f-b3bf-4ff0-8d67-6bebc75647f9 .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ntnu.no/ub/digital/format/f3> .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/subject> "Eggen mølle" .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://purl.org/dc/terms/subject> "Skaun" .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://www.ntnu.no/ub/data/nl#geoSubjectMunicipality> <http://sws.geonames.org/8532268> .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://www.ntnu.no/ub/data/nl#placeOfCreation> <http://sws.geonames.org/3139148> .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://www.ntnu.no/ub/data/nl#genre> <http://www.ntnu.no/ub/data/genre/g8> .
+<http://www.ntnu.no/ub/digital/document/130041158> <http://www.geographicknowledge.de/vocab/maps#hasScale> "1:400" .
+_:f9f92c1f-b3bf-4ff0-8d67-6bebc75647f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+_:f9f92c1f-b3bf-4ff0-8d67-6bebc75647f9 <http://www.w3.org/2006/time#year> "1826"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+_:f9f92c1f-b3bf-4ff0-8d67-6bebc75647f9 <http://www.ntnu.no/ub/data/nl#certainty> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/identifier> "130040776" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/identifier> "802031234" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/creator> <http://www.ntnu.no/ub/digital/person/p177> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/title> "Situations Kart over nogle Stader i Stordalselven, hvor Anders Sivertsøn Hembre har haft Fiskegaard ..." .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/date> _:d701eee0-c533-42b9-a826-96ee261fee54 .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ntnu.no/ub/digital/format/f3> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Stjørdalselva" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Hembre gård" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Hegre gård" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "Elver" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://purl.org/dc/terms/subject> "gårder" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.ntnu.no/ub/data/nl#placeOfCreation> <http://sws.geonames.org/3136767> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.ntnu.no/ub/data/nl#genre> <http://www.ntnu.no/ub/data/genre/g8> .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.geographicknowledge.de/vocab/maps#hasScale> "1:1000" .
+<http://www.ntnu.no/ub/digital/document/130040776> <http://www.ntnu.no/ub/data/nl#dimensions> "37 x 48" .
+_:d701eee0-c533-42b9-a826-96ee261fee54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+_:d701eee0-c533-42b9-a826-96ee261fee54 <http://www.w3.org/2006/time#year> "1833"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+_:d701eee0-c533-42b9-a826-96ee261fee54 <http://www.ntnu.no/ub/data/nl#certainty> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
